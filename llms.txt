@@ -1,0 +1,58 @@
+# Offline Game Hub
+
+> Offline Game Hub is a free Chrome extension (Manifest V3, version 2.0) with 31 original mini-games that work fully offline. It has no ads, no account and no analytics or tracking, and it asks for only one permission ("storage"), which it uses to save scores on the user's device. All games can also be played in the browser on this website.
+
+Key facts:
+- Price: free. No in-app purchases and no ads.
+- Works without an internet connection. The extension makes no network requests, and every game, graphic and sound is bundled or generated on the device.
+- Platform: Google Chrome and other Chromium browsers (Edge, Brave, Opera). The web version runs in any modern browser.
+- Status: coming soon to the Chrome Web Store.
+- Data: best scores, favorites, recently played games, stats, achievements and settings are stored locally only.
+- Support contact: saqibsohaib48@gmail.com
+
+## Pages
+- [Home](https://YOUR-USERNAME.github.io/offline-game-hub/): overview, full game list, screenshots and FAQ
+- [Play in browser](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html): the complete game hub, playable online and cached for offline use
+- [Support](https://YOUR-USERNAME.github.io/offline-game-hub/support.html): contact, installation steps and troubleshooting
+- [Privacy Policy](https://YOUR-USERNAME.github.io/offline-game-hub/privacy.html): no personal data is collected
+
+## Games
+
+### Puzzle (11)
+- [Number Merge](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/merge2048): Slide and merge glowing tiles to reach 2048.
+- [Memory Match](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/memorymatch): Flip cards and find every matching pair.
+- [Sliding Puzzle](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/slidingpuzzle): Slide the tiles back into order.
+- [Mine Finder](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/minesweeper): Clear the field without hitting a mine.
+- [Bubble Pop](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/bubblepop): Pop groups of 2+ same-color bubbles.
+- [Pattern Memory](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/patternmemory): Repeat the growing light-and-sound sequence.
+- [Color Match](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/colormatch): Spot the one tile with a different shade.
+- [Word Puzzle](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/wordscramble): Unscramble the letters to find the word.
+- [Block Drop](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/blockdrop): Rotate falling blocks and clear full lines.
+- [Jewel Swap](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/jewelswap): Swap gems to match 3 and trigger cascades.
+- [Sudoku](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/sudoku): Fill the grid so every row, column and box has 1–9.
+
+### Arcade (9)
+- [Circuit Snake](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/snake): Eat, grow, and don't bite yourself.
+- [Brick Breaker](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/brickbreaker): Smash every brick with the bouncing ball.
+- [Sky Hopper](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/skyhopper): Flap through the gaps between the pillars.
+- [Star Defender](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/spaceshooter): Blast asteroids and alien drones.
+- [Dodge Runner](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/dodgerunner): Switch lanes on the neon highway.
+- [Coin Collector](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/coincollector): Grab the coins, dodge the bombs.
+- [Stack Tower](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/stacktower): Drop sliding blocks to build the tallest tower.
+- [Cloud Jumper](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/cloudjumper): Bounce up the clouds as high as you can.
+- [Neon Pong](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/neonpong): Classic paddle duel against the computer.
+
+### Board (4)
+- [Tic Tac Toe](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/tictactoe): Classic 3×3 vs the computer or a friend.
+- [Four in a Row](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/connectfour): Drop discs and connect four first.
+- [Dots & Boxes](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/dotsandboxes): Draw lines and claim the most boxes.
+- [Reversi](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/reversi): Outflank and flip your opponent's discs.
+
+### Casual (7)
+- [Quick Math](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/quickmath): Solve equations against the clock.
+- [Reaction Test](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/reactiontest): Tap the instant the screen turns green.
+- [Target Tap](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/targettap): Hit the shrinking targets before they vanish.
+- [Fruit Catch](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/fruitcatch): Catch falling fruit, avoid the bombs.
+- [Mole Bash](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/molebash): Bonk the moles as they pop up.
+- [Typing Rush](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/typingrush): Type the falling words before they land.
+- [Mini Golf](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html#game/minigolf): Sink the ball in 9 quirky holes.

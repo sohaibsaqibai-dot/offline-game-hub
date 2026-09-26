@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark" data-animations="full">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+<title>Play – Offline Game Hub</title>
+<meta name="description" content="Play 31 free mini-games in your browser. Works offline, no ads, no sign-up.">
+<link rel="icon" href="../icons/icon32.png" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="bg-fx" aria-hidden="true"><i></i><i></i><i></i></div>
+
+<header class="topbar">
+  <a class="brand" href="#" title="Offline Game Hub">
+    <img src="../icons/icon128.png" alt="Offline Game Hub logo" class="brand-logo" />
+    <div class="brand-text">
+      <h1>Offline Game Hub</h1>
+      <span class="brand-sub" id="brand-sub">Mini-games · always offline</span>
+    </div>
+  </a>
+  <div class="topbar-actions">
+    <span class="offline-pill"><span class="dot"></span>Offline ready</span>
+    <button class="icon-btn" id="trophy-btn" title="Achievements" aria-label="Achievements">🏆</button>
+    <button class="icon-btn" id="sound-toggle" title="Toggle sound" aria-label="Toggle sound">🔊</button>
+    <button class="icon-btn" id="settings-btn" title="Settings" aria-label="Settings">⚙️</button>
+  </div>
+</header>
+
+<!-- ===================== LAUNCHER ===================== -->
+<main id="view-launcher" class="view">
+  <section class="hero">
+    <article class="featured" id="featured"></article>
+    <aside class="side">
+      <div class="panel stats-panel">
+        <h3 class="panel-title">Your arcade</h3>
+        <div class="stats-grid" id="stats-grid"></div>
+      </div>
+      <div class="panel continue-panel">
+        <h3 class="panel-title">Continue playing</h3>
+        <div id="continue-list" class="continue-list"></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="library">
+    <div class="library-head">
+      <h2 class="section-title">Game library <span class="count" id="lib-count"></span></h2>
+      <div class="controls">
+        <div class="search-wrap">
+          <svg viewBox="0 0 24 24" class="search-icon" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="m20 20-4-4" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg>
+          <input id="search-input" type="text" placeholder="Search games…" autocomplete="off" />
+          <kbd class="search-kbd">/</kbd>
+        </div>
+        <select id="sort-select" class="sort-select" aria-label="Sort games">
+          <option value="featured">Sort: Featured</option>
+          <option value="az">Sort: A–Z</option>
+          <option value="recent">Sort: Recently played</option>
+          <option value="score">Sort: Highest score</option>
+          <option value="favorites">Sort: Favorites first</option>
+        </select>
+      </div>
+    </div>
+    <nav class="category-tabs" id="category-tabs"></nav>
+    <div id="game-grid" class="game-grid" aria-live="polite"></div>
+    <div id="empty-state" class="empty-state hidden">
+      <div class="empty-emoji">🕹️</div>
+      <p id="empty-text">No games match your search.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    <img src="../icons/icon32.png" alt="" /> Offline Game Hub · no accounts, no ads, no tracking — everything stays on your device. · <a href="../../" style="color:inherit;font-weight:700">← Back to website</a>
+  </footer>
+</main>
+
+<!-- ===================== GAME VIEW ===================== -->
+<main id="view-game" class="view hidden">
+  <div class="game-header">
+    <button class="back-btn" id="back-btn" title="Back to hub">← <span>Hub</span></button>
+    <div class="game-id">
+      <div class="game-thumb" id="game-thumb"></div>
+      <div>
+        <h2 id="game-title" class="game-title">Game</h2>
+        <span id="game-cat" class="game-cat"></span>
+      </div>
+    </div>
+    <div class="hud">
+      <span class="hud-pill" id="stat-level" hidden><em>Level</em><b id="level-val">1</b></span>
+      <span class="hud-pill" id="stat-lives" hidden><em>Lives</em><b id="lives-val">-</b></span>
+      <span class="hud-pill" id="stat-timer" hidden><em>Time</em><b id="timer-val">-</b></span>
+      <span class="hud-pill score"><em>Score</em><b id="score-val">0</b></span>
+      <span class="hud-pill best"><em>Best</em><b id="best-val">0</b></span>
+    </div>
+    <div class="game-actions">
+      <button class="icon-btn" id="pause-btn" title="Pause (Esc)" aria-label="Pause">⏸</button>
+      <button class="icon-btn" id="restart-btn" title="Restart" aria-label="Restart">↻</button>
+      <button class="icon-btn" id="game-sound-btn" title="Toggle sound" aria-label="Toggle sound">🔊</button>
+      <button class="icon-btn" id="fs-btn" title="Fullscreen" aria-label="Fullscreen">⛶</button>
+    </div>
+  </div>
+  <div id="game-root" class="game-root"></div>
+</main>
+
+<!-- ===================== SETTINGS ===================== -->
+<div id="settings-modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>Settings</h3>
+      <button class="icon-btn" id="close-settings" aria-label="Close">✕</button>
+    </div>
+    <div class="settings-section">
+      <h4>Appearance</h4>
+      <div class="seg-control" id="theme-control">
+        <button data-val="dark" class="seg-btn">🌙 Dark</button>
+        <button data-val="light" class="seg-btn">☀️ Light</button>
+        <button data-val="system" class="seg-btn">💻 System</button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h4>Sound effects</h4>
+      <div class="seg-control" id="sound-control">
+        <button data-val="on" class="seg-btn">On</button>
+        <button data-val="off" class="seg-btn">Off</button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h4>Animations</h4>
+      <div class="seg-control" id="animation-control">
+        <button data-val="full" class="seg-btn">Full</button>
+        <button data-val="reduced" class="seg-btn">Reduced</button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h4>Your data</h4>
+      <p class="hint">Everything is stored only on this device. Nothing is ever uploaded.</p>
+      <div class="danger-row">
+        <button class="danger-btn" id="reset-scores">Reset scores</button>
+        <button class="danger-btn" id="reset-favorites">Reset favorites</button>
+        <button class="danger-btn" id="reset-all">Reset all data</button>
+      </div>
+    </div>
+    <div class="settings-section">
+      <h4>Privacy</h4>
+      <p class="hint">No accounts, no login, no analytics, no ads, no data collection. This extension never makes a network request — every game, sound and score lives entirely on your device.</p>
+    </div>
+  </div>
+</div>
+
+<div id="ach-modal" class="modal hidden">
+  <div class="modal-card">
+    <div class="modal-head">
+      <h3>Achievements <span class="count" id="ach-count"></span></h3>
+      <button class="icon-btn" id="close-ach" aria-label="Close">✕</button>
+    </div>
+    <div id="ach-list" class="ach-list"></div>
+  </div>
+</div>
+
+<div id="confirm-modal" class="modal hidden">
+  <div class="modal-card small">
+    <h3 id="confirm-title">Are you sure?</h3>
+    <p id="confirm-body" class="hint"></p>
+    <div class="confirm-actions">
+      <button class="ghost-btn" id="confirm-cancel">Cancel</button>
+      <button class="danger-btn solid" id="confirm-ok">Delete</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast hidden"></div>
+
+<script type="module" src="js/app.js"></script>
+<script src="../sw-register.js"></script>
+</body>
+</html>
