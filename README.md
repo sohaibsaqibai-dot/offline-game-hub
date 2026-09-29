@@ -20,7 +20,9 @@ The files use the placeholder address `https://YOUR-USERNAME.github.io/offline-g
 
 If you named the repository something other than `offline-game-hub`, replace that part of the address too.
 
-When the extension is live on the Chrome Web Store, search `index.html` for `Coming soon`, point that button's `href` to your store listing, and remove the `Coming soon` label.
+The "Add to Chrome" buttons link to the live listing: https://chromewebstore.google.com/detail/obmkiidjoijonjjenklfifehhkdjcnji. If the listing address ever changes, search all `.html` files and `llms.txt` for `obmkiidjoijonjjenklfifehhkdjcnji` and update it.
+
+**Optional official badge:** Google lets you use its official "Available in the Chrome Web Store" badge without asking first. Download it from https://developer.chrome.com/docs/webstore/branding, don't change it except to resize it, and link it straight to your listing. Don't draw your own Chrome logo.
 
 ## What's inside
 

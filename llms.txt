@@ -6,11 +6,12 @@ Key facts:
 - Price: free. No in-app purchases and no ads.
 - Works without an internet connection. The extension makes no network requests, and every game, graphic and sound is bundled or generated on the device.
 - Platform: Google Chrome and other Chromium browsers (Edge, Brave, Opera). The web version runs in any modern browser.
-- Status: coming soon to the Chrome Web Store.
+- Status: available now on the Chrome Web Store: https://chromewebstore.google.com/detail/obmkiidjoijonjjenklfifehhkdjcnji
 - Data: best scores, favorites, recently played games, stats, achievements and settings are stored locally only.
 - Support contact: saqibsohaib48@gmail.com
 
 ## Pages
+- [Chrome Web Store listing](https://chromewebstore.google.com/detail/obmkiidjoijonjjenklfifehhkdjcnji): install the extension (free)
 - [Home](https://YOUR-USERNAME.github.io/offline-game-hub/): overview, full game list, screenshots and FAQ
 - [Play in browser](https://YOUR-USERNAME.github.io/offline-game-hub/play/hub/index.html): the complete game hub, playable online and cached for offline use
 - [Support](https://YOUR-USERNAME.github.io/offline-game-hub/support.html): contact, installation steps and troubleshooting
